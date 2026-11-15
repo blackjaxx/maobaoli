@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="「猫暴力」是一只 4 岁的调皮美短虎斑。这里记录它的日常照片，也分享新手科学养猫的经验与技巧。">
+  <meta name="color-scheme" content="light">
+  <title>猫暴力 · 一只调皮美短的日常与养猫分享</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <!-- 可选字体：离线时自动回退到系统字体，不影响使用 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;700;900&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">跳到主要内容</a>
+
+<!-- ===== 顶部导航 ===== -->
+<header class="site-header" id="siteHeader">
+  <nav class="nav container" aria-label="主导航">
+    <a class="brand" href="#home">
+      <svg class="brand__paw" viewBox="0 0 24 24" aria-hidden="true">
+        <g fill="currentColor">
+          <ellipse cx="12" cy="15.5" rx="5.2" ry="4.2"/>
+          <ellipse cx="5.6" cy="9.8" rx="2.2" ry="3"/>
+          <ellipse cx="9.8" cy="7" rx="2.2" ry="3"/>
+          <ellipse cx="14.2" cy="7" rx="2.2" ry="3"/>
+          <ellipse cx="18.4" cy="9.8" rx="2.2" ry="3"/>
+        </g>
+      </svg>
+      <span>猫暴力</span>
+    </a>
+
+    <ul class="nav__links" id="navLinks">
+      <li><a href="#home">首页</a></li>
+      <li><a href="#profile">我家猫</a></li>
+      <li><a href="#gallery">照片墙</a></li>
+      <li><a href="#tips">养猫技巧</a></li>
+      <li><a href="#faq">常见问题</a></li>
+    </ul>
+
+    <div class="nav__actions">
+      <a class="btn btn--primary btn--sm" href="#gallery">看照片</a>
+      <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="打开菜单">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- ===== 1. 首屏 ===== -->
+  <section class="hero" id="home">
+    <div class="container hero__inner">
+      <div class="hero__text">
+        <span class="hero__badge">美短虎斑 · 公 · 4 岁</span>
+        <h1>这是我的猫，<span class="accent">猫暴力</span></h1>
+        <p class="hero__sub">记录它的日常照片，分享实用的养猫经验与技巧。</p>
+        <div class="hero__cta">
+          <a class="btn btn--primary btn--lg" href="#profile">认识它</a>
+          <a class="btn btn--ghost btn--lg" href="#tips">养猫技巧</a>
+        </div>
+      </div>
+
+      <figure class="hero__media">
+        <img src="assets/cat/photo-6-portrait.jpg"
+             alt="猫暴力戴着彩色毛球项圈坐在地上抬头看镜头的照片" width="1280" height="1600">
+        <figcaption class="hero__float hero__float--1">📸 日常实拍</figcaption>
+        <figcaption class="hero__float hero__float--2">📦 纸箱常驻</figcaption>
+      </figure>
+    </div>
+    <div class="hero__wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 72" preserveAspectRatio="none"><path fill="var(--cream-2)" d="M0,40 C240,80 480,0 720,24 C960,48 1200,72 1440,32 L1440,72 L0,72 Z"/></svg>
+    </div>
+  </section>
+
+  <!-- ===== 2. 我家猫 ===== -->
+  <section class="section" id="profile">
+    <div class="container">
+      <header class="section__head reveal">
+        <p class="section__kicker">我家猫</p>
+        <h2>基本档案与日常</h2>
+        <p class="section__lead">猫暴力，公猫，4 岁。性格调皮好动，精力旺盛。</p>
+      </header>
+
+      <div class="profile reveal">
+        <figure class="profile__figure">
+          <img src="assets/cat/photo-8-lean.jpg" alt="猫暴力从猫窝里探出头，两只前爪交叠搭在窝边的照片" width="1280" height="1600" loading="lazy">
+        </figure>
+        <div class="profile__info">
+          <dl class="profile__facts">
+            <div><dt>名字</dt><dd>猫暴力</dd></div>
+            <div><dt>性别</dt><dd>公</dd></div>
+            <div><dt>年龄</dt><dd>4 岁</dd></div>
+            <div><dt>品种</dt><dd>美短·银虎斑</dd></div>
+            <div><dt>来历</dt><dd>260 元「巨款」抱回家</dd></div>
+            <div><dt>性格</dt><dd>调皮 · 好奇 · 黏人</dd></div>
+          </dl>
+          <p class="profile__bio">
+            今年 4 岁，性格调皮好动。日常爱好是占领纸箱、戴牵引绳出门遛弯，
+            偶尔蹲在笔记本电脑后面看屏幕，拍照时也比较配合。
+          </p>
+          <ul class="hobby-list" aria-label="它的爱好">
+            <li>📦 纸箱爱好者</li>
+            <li>🌳 偶尔出门遛弯</li>
+            <li>📷 配合拍照</li>
+            <li>🍗 定时干饭</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="grid grid--3 profile__moments reveal">
+        <button class="moment" type="button" data-photo="0">
+          <img src="assets/cat/photo-1-box.jpg" alt="猫暴力四脚朝天躺在纸箱里的照片" loading="lazy" width="1280" height="1600">
+          <span>纸箱里的日常</span>
+        </button>
+        <button class="moment" type="button" data-photo="2">
+          <img src="assets/cat/photo-3-laptop.jpg" alt="猫暴力在笔记本电脑后面探头看的照片" loading="lazy" width="1280" height="1600">
+          <span>笔记本后面的猫</span>
+        </button>
+        <button class="moment" type="button" data-photo="6">
+          <img src="assets/cat/photo-7-yawn.jpg" alt="猫暴力张大嘴巴打哈欠的照片" loading="lazy" width="1280" height="1600">
+          <span>打哈欠的瞬间</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 3. 照片墙 ===== -->
+  <section class="section section--tint" id="gallery">
+    <div class="container">
+      <header class="section__head reveal">
+        <p class="section__kicker">照片墙</p>
+        <h2>它的 8 个日常瞬间</h2>
+        <p class="section__lead">共 8 张日常记录，点击照片查看大图。</p>
+      </header>
+
+      <div class="gallery" id="galleryGrid">
+        <!-- 照片由 js/main.js 渲染，点击打开大图 -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 4. 养猫技巧 ===== -->
+  <section class="section" id="tips">
+    <div class="container">
+      <header class="section__head reveal">
+        <p class="section__kicker">养猫技巧</p>
+        <h2>新手养猫，我的六条心得</h2>
+        <p class="section__lead">养猫四年积累的经验笔记，按主题整理，供新手参考。</p>
+      </header>
+
+      <div class="notice reveal" role="note">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M12 8v5m0 3.5v.1M10.3 3.9 2.8 17a2 2 0 0 0 1.7 3h15a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>
+        <p>以下内容均为<strong>个人养猫经验分享</strong>，每只猫情况不同，免疫、驱虫、用药等请以兽医的专业建议为准。</p>
+      </div>
+
+      <div class="grid grid--3">
+        <article class="card reveal">
+          <div class="card__icon" style="--icon-bg:#FCE8D8">🍚</div>
+          <h3>科学喂养</h3>
+          <p>选正规渠道、适合年龄段的猫粮，配料表前几位应是明确的肉类；定时定量喂食，换粮用一周左右逐步过渡。</p>
+          <p class="tip-line">洋葱、巧克力、葡萄、酒精对猫有毒，牛奶多数猫乳糖不耐——人的食物别随手投喂。</p>
+        </article>
+        <article class="card reveal">
+          <div class="card__icon" style="--icon-bg:#EAF2E3">💉</div>
+          <h3>疫苗与驱虫</h3>
+          <p>幼猫按医嘱完成猫三联基础免疫，之后每年加强，狂犬疫苗按当地规定接种；体内外驱虫按药品说明定期做。</p>
+          <p class="tip-line">把疫苗、驱虫、体检记成日历提醒，到点就办，不靠记性。</p>
+        </article>
+        <article class="card reveal">
+          <div class="card__icon" style="--icon-bg:#FDF2E1">✂️</div>
+          <h3>适龄绝育</h3>
+          <p>绝育有助于减少生殖系统疾病，也通常能让发情期的乱叫、乱尿明显减少，猫和主人都更轻松。</p>
+          <p class="tip-line">术后戴好伊丽莎白圈、保持伤口干燥；绝育后代谢变慢，注意控制体重。</p>
+        </article>
+        <article class="card reveal">
+          <div class="card__icon" style="--icon-bg:#EAF2E3">📦</div>
+          <h3>环境丰容（纸箱 yyds）</h3>
+          <p>一个快递纸箱胜过昂贵猫窝：给几个开口方向不同的箱子轮换；再配上猫抓板、窗台或猫爬架这样的垂直空间。</p>
+          <p class="tip-line">玩具定期轮换，每天 10 分钟逗猫棒互动，能消耗掉调皮猫大半的「暴力值」。</p>
+        </article>
+        <article class="card reveal">
+          <div class="card__icon" style="--icon-bg:#FCE8D8">🌳</div>
+          <h3>外出与遛猫</h3>
+          <p>不是所有猫都适合出门。先在室内试胸背带，它愿意走才考虑外出；全程牵引，选安静时段，避开车流和狗。</p>
+          <p class="tip-line">第一次出门 5 分钟就回，循序渐进；出门前做好驱虫，回家检查爪子和毛发。</p>
+        </article>
+        <article class="card reveal">
+          <div class="card__icon" style="--icon-bg:#FDF2E1">👀</div>
+          <h3>健康信号观察</h3>
+          <p>每天留意食欲、精神、呼吸和猫砂盆里的状态；偶尔吐毛球正常，频繁呕吐或一天不吃就要警惕。</p>
+          <p class="tip-line">梳毛时顺便摸一遍全身，检查有没有肿块、伤口和耳螨；日常照片是就医时的好参考。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 5. 常见问题 ===== -->
+  <section class="section section--tint" id="faq">
+    <div class="container container--narrow">
+      <header class="section__head reveal">
+        <p class="section__kicker">常见问题</p>
+        <h2>新手养猫的六个疑问</h2>
+        <p class="section__lead">新手养猫的常见疑问与解答。</p>
+      </header>
+
+      <div class="faq reveal" id="faqList">
+        <div class="faq__item">
+          <h3><button class="faq__q" type="button" aria-expanded="false">刚把猫接回家，要准备什么？<span class="faq__icon" aria-hidden="true"></span></button></h3>
+          <div class="faq__a" hidden><div class="faq__a-inner">
+            <p>提前备好：猫粮（问清它原来吃什么，换粮要过渡）、食水碗、猫砂盆和原来的猫砂、纸箱或猫窝、猫抓板。头几天给它一个安静的角落适应新环境，不要急着抱、追着撸或洗澡，让它自己决定什么时候出来打招呼。</p>
+          </div></div>
+        </div>
+
+        <div class="faq__item">
+          <h3><button class="faq__q" type="button" aria-expanded="false">猫粮到底怎么选？<span class="faq__icon" aria-hidden="true"></span></button></h3>
+          <div class="faq__a" hidden><div class="faq__a-inner">
+            <p>看配料表：前几位应是明确的肉类（如鸡肉、脱水鸡肉），而不是谷物堆料；选符合年龄段（幼猫 / 成猫）的正规品牌。预算内选长期稳定的就好，不必迷信网红粮。换粮用「7 天过渡法」，新旧粮比例慢慢调整，减少软便。</p>
+          </div></div>
+        </div>
+
+        <div class="faq__item">
+          <h3><button class="faq__q" type="button" aria-expanded="false">疫苗和驱虫的时间表是什么？<span class="faq__icon" aria-hidden="true"></span></button></h3>
+          <div class="faq__a" hidden><div class="faq__a-inner">
+            <p>幼猫一般 8 周龄左右开始猫三联，每针间隔 3–4 周，共 2–3 针，之后每年加强；狂犬疫苗按当地要求接种。体外驱虫通常每月一次，体内驱虫 1–3 个月一次（看药品说明和是否外出）。具体方案请让兽医根据猫咪情况安排。</p>
+          </div></div>
+        </div>
+
+        <div class="faq__item">
+          <h3><button class="faq__q" type="button" aria-expanded="false">室内猫需要遛吗？<span class="faq__icon" aria-hidden="true"></span></button></h3>
+          <div class="faq__a" hidden><div class="faq__a-inner">
+            <p>不是必须。是否外出完全取决于猫的接受度：先在室内试胸背带，它愿意迈步才考虑出门；全程牵引、选安静环境、做好驱虫。胆小或抗拒的猫不出门也完全没问题，在家布置好垂直空间、每天互动就足够了。</p>
+          </div></div>
+        </div>
+
+        <div class="faq__item">
+          <h3><button class="faq__q" type="button" aria-expanded="false">猫太调皮、拆家怎么办？<span class="faq__icon" aria-hidden="true"></span></button></h3>
+          <div class="faq__a" hidden><div class="faq__a-inner">
+            <p>精力过剩是主因：每天固定时间用逗猫棒互动、玩具轮换保持新鲜感、多设几个抓板和纸箱。睡前一次大运动量的游戏，能让它夜里安分很多。喷水惩罚基本无效还伤感情，用「转移注意力 + 奖励好行为」代替。</p>
+          </div></div>
+        </div>
+
+        <div class="faq__item">
+          <h3><button class="faq__q" type="button" aria-expanded="false">什么情况必须去医院？<span class="faq__icon" aria-hidden="true"></span></button></h3>
+          <div class="faq__a" hidden><div class="faq__a-inner">
+            <p>超过 24 小时不吃不喝、精神萎靡躲藏、频繁呕吐或腹泻、排尿困难或频繁进出猫砂盆、呼吸急促、明显外伤——出现这些请尽快就医。猫很能忍痛，等它表现出明显异常时往往已经不轻，别抱着「再观察一晚」的心态赌。</p>
+          </div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ===== 6. 页脚 ===== -->
+<footer class="footer" id="contact">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <a class="brand brand--light" href="#home">
+        <svg class="brand__paw" viewBox="0 0 24 24" aria-hidden="true">
+          <g fill="currentColor">
+            <ellipse cx="12" cy="15.5" rx="5.2" ry="4.2"/>
+            <ellipse cx="5.6" cy="9.8" rx="2.2" ry="3"/>
+            <ellipse cx="9.8" cy="7" rx="2.2" ry="3"/>
+            <ellipse cx="14.2" cy="7" rx="2.2" ry="3"/>
+            <ellipse cx="18.4" cy="9.8" rx="2.2" ry="3"/>
+          </g>
+        </svg>
+        <span>猫暴力</span>
+      </a>
+      <p>记录美短虎斑「猫暴力」的日常照片，分享新手养猫的经验与技巧。</p>
+    </div>
+
+    <nav class="footer__col" aria-label="页脚导航">
+      <h3>快速导航</h3>
+      <ul>
+        <li><a href="#profile">我家猫</a></li>
+        <li><a href="#gallery">照片墙</a></li>
+        <li><a href="#tips">养猫技巧</a></li>
+        <li><a href="#faq">常见问题</a></li>
+      </ul>
+    </nav>
+
+    <div class="footer__col">
+      <h3>联系与交流</h3>
+      <ul class="footer__contact">
+        <li><span class="footer__label">邮箱</span><span class="todo-tag">待补充</span></li>
+        <li><span class="footer__label">微信公众号</span><span class="todo-tag">待补充</span></li>
+        <li><span class="footer__label">小红书</span><span class="todo-tag">待补充</span></li>
+      </ul>
+    </div>
+
+    <div class="footer__col">
+      <h3>关于本站</h3>
+      <ul class="footer__about">
+        <li>照片均为猫暴力本人出镜 😸</li>
+        <li>养猫内容为个人经验分享</li>
+        <li>不构成任何医疗建议</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container footer__bottom">
+    <p>本站为<strong>个人养猫分享网站</strong>：照片均为博主实拍，转载请注明出处；养猫技巧仅供参考，猫咪健康问题请咨询专业兽医。</p>
+    <p>© 2026 猫暴力 · 个人养猫分享网站</p>
+  </div>
+</footer>
+
+<!-- ===== 照片灯箱 ===== -->
+<dialog class="lightbox" id="photoModal" aria-label="照片查看器">
+  <button class="lightbox__close" id="lightboxClose" type="button" aria-label="关闭照片">×</button>
+  <span class="lightbox__counter" id="lightboxCounter"></span>
+  <figure class="lightbox__figure">
+    <img id="lightboxImg" src="" alt="" width="1280" height="1600">
+    <figcaption id="lightboxCaption"></figcaption>
+  </figure>
+  <button class="lightbox__nav lightbox__nav--prev" id="lightboxPrev" type="button" aria-label="上一张">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M15 5l-7 7 7 7"/></svg>
+  </button>
+  <button class="lightbox__nav lightbox__nav--next" id="lightboxNext" type="button" aria-label="下一张">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+  </button>
+</dialog>
+
+<button class="to-top" id="toTop" type="button" aria-label="返回顶部" hidden>
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M12 19V6m0 0-6 6m6-6 6 6"/></svg>
+</button>
+
+<script src="js/main.js"></script>
+</body>
+</html>
