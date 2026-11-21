@@ -121,6 +121,20 @@ breedBtns.forEach((btn) => {
   });
 });
 
+/* ---------- 病症速查筛选 ---------- */
+const healthBtns = $$(".filter:not(.filter--breed) .filter__btn[data-health-filter]");
+healthBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    healthBtns.forEach((b) => {
+      b.classList.toggle("is-active", b === btn);
+      b.setAttribute("aria-selected", String(b === btn));
+    });
+    $$("#healthGrid .cond-card").forEach((c) => {
+      c.classList.toggle("is-hidden", !(btn.dataset.healthFilter === "all" || c.dataset.cat === btn.dataset.healthFilter));
+    });
+  });
+});
+
 /* ---------- 百科：猫年龄换算器 ---------- */
 const ageInput = $("#ageInput");
 const ageResult = $("#ageResult");
@@ -266,7 +280,7 @@ navLinks.addEventListener("click", (e) => {
 });
 
 /* ---------- 导航：滚动高亮当前版块 ---------- */
-const sections = ["home", "profile", "gallery", "wiki", "welfare", "tips", "faq"]
+const sections = ["home", "profile", "gallery", "wiki", "welfare", "tips", "health", "faq"]
   .map((id) => document.getElementById(id))
   .filter(Boolean);
 

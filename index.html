@@ -40,6 +40,7 @@
       <li><a href="#wiki">猫咪百科</a></li>
       <li><a href="#welfare">保护流浪动物</a></li>
       <li><a href="#tips">养猫技巧</a></li>
+      <li><a href="#health">病症速查</a></li>
       <li><a href="#faq">常见问题</a></li>
     </ul>
 
@@ -438,8 +439,109 @@
     </div>
   </section>
 
-  <!-- ===== 7. 常见问题 ===== -->
-  <section class="section section--tint" id="faq">
+  <!-- ===== 7. 常见病症速查 ===== -->
+  <section class="section section--tint" id="health">
+    <div class="container">
+      <header class="section__head reveal">
+        <div class="head-paws" aria-hidden="true"></div>
+        <h2>常见病症与家庭处理</h2>
+        <p class="section__lead">轻症可以先在家初步处理，但猫很能忍痛——症状持续或拿不准时，请直接就医。</p>
+      </header>
+
+      <div class="notice reveal" role="note">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M12 8v5m0 3.5v.1M10.3 3.9 2.8 17a2 2 0 0 0 1.7 3h15a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>
+        <p>以下内容整理自公开兽医科普资料，仅供<strong>家庭应急参考</strong>，不能替代兽医诊断。人用药物给猫使用前，请先咨询剂量；价格为大致区间，以实际渠道为准。</p>
+      </div>
+
+      <div class="filter reveal" role="tablist" aria-label="按类别筛选病症">
+        <button class="filter__btn is-active" data-health-filter="all" role="tab" aria-selected="true">全部</button>
+        <button class="filter__btn" data-health-filter="skin" role="tab" aria-selected="false">皮肤</button>
+        <button class="filter__btn" data-health-filter="ear" role="tab" aria-selected="false">耳部</button>
+        <button class="filter__btn" data-health-filter="gut" role="tab" aria-selected="false">肠胃</button>
+        <button class="filter__btn" data-health-filter="eye" role="tab" aria-selected="false">眼鼻呼吸</button>
+        <button class="filter__btn" data-health-filter="deworm" role="tab" aria-selected="false">驱虫</button>
+        <button class="filter__btn" data-health-filter="kit" role="tab" aria-selected="false">常备药</button>
+      </div>
+
+      <div class="grid grid--3 reveal" id="healthGrid">
+        <article class="card cond-card" data-cat="skin">
+          <h3>猫癣 <span class="cond-tag">皮肤</span></h3>
+          <p class="cond-row"><strong>识别</strong>圆形脱毛、皮屑结痂，多发于脸部、耳缘和四肢，可能传染人。</p>
+          <p class="cond-row"><strong>居家</strong>患处外用抗真菌药（联苯苄唑喷剂 / 克霉唑乳膏，人药店约 10–30 元），佩戴脖圈防舔，环境同步消毒。</p>
+          <p class="cond-row cond-row--danger"><strong>就医</strong>大面积扩散、久治不愈或幼猫感染——口服抗真菌药（伊曲康唑等）需兽医指导。</p>
+        </article>
+        <article class="card cond-card" data-cat="ear">
+          <h3>耳螨 <span class="cond-tag">耳部</span></h3>
+          <p class="cond-row"><strong>识别</strong>频繁甩头挠耳，耳道内有大量黑褐色耳垢。</p>
+          <p class="cond-row"><strong>居家</strong>宠物洗耳液清洁（滴入—揉搓—甩出—擦净），配合体外滴剂驱虫（大宠爱 / 爱滴克类，几十元一支）。</p>
+          <p class="cond-row cond-row--danger"><strong>就医</strong>耳道红肿流脓或挠破出血，可能已继发中耳炎。</p>
+        </article>
+        <article class="card cond-card" data-cat="gut">
+          <h3>软便 / 轻度腹泻 <span class="cond-tag">肠胃</span></h3>
+          <p class="cond-row"><strong>识别</strong>便便不成形，但精神食欲正常。</p>
+          <p class="cond-row"><strong>居家</strong>宠物益生菌调理（布拉迪酵母类）；换粮期放慢过渡节奏。蒙脱石散可应急，人用请先咨询剂量。</p>
+          <p class="cond-row cond-row--danger"><strong>就医</strong>腹泻超过 2 天、便中带血，或伴随呕吐、精神变差。</p>
+        </article>
+        <article class="card cond-card" data-cat="gut">
+          <h3>毛球 <span class="cond-tag">肠胃</span></h3>
+          <p class="cond-row"><strong>识别</strong>偶尔吐出条状毛团，吐后食欲精神正常。</p>
+          <p class="cond-row"><strong>居家</strong>化毛膏或猫草，勤梳毛减少吞毛，换毛季加强。</p>
+          <p class="cond-row cond-row--danger"><strong>就医</strong>频繁干呕却吐不出、便秘腹胀——警惕肠道毛球堵塞。</p>
+        </article>
+        <article class="card cond-card" data-cat="eye">
+          <h3>泪痕与眼部分泌物 <span class="cond-tag">眼鼻呼吸</span></h3>
+          <p class="cond-row"><strong>识别</strong>眼周红褐色分泌物，扁脸猫更常见。</p>
+          <p class="cond-row"><strong>居家</strong>生理盐水或宠物洗眼液蘸棉片轻擦，保持眼周干爽。</p>
+          <p class="cond-row cond-row--danger"><strong>就医</strong>分泌物转黄绿脓性、眼睛红肿眯眼流泪不止——需兽医开眼部药物。</p>
+        </article>
+        <article class="card cond-card" data-cat="eye">
+          <h3>猫鼻支（上呼吸道感染） <span class="cond-tag">眼鼻呼吸</span></h3>
+          <p class="cond-row"><strong>识别</strong>打喷嚏、流鼻涕、眼鼻分泌物增多，可能发烧。</p>
+          <p class="cond-row"><strong>居家</strong>温水棉片清理眼鼻分泌物保持通畅，鼓励进食饮水；切勿喂人用感冒药。</p>
+          <p class="cond-row cond-row--danger"><strong>就医</strong>呼吸困难、拒食、发烧或幼猫老年猫感染——需抗病毒与支持治疗。</p>
+        </article>
+        <article class="card cond-card" data-cat="deworm">
+          <h3>体外驱虫（跳蚤 / 蜱虫） <span class="cond-tag">驱虫</span></h3>
+          <p class="cond-row"><strong>识别</strong>频繁挠痒，毛发间有黑色煤砂样颗粒。</p>
+          <p class="cond-row"><strong>居家</strong>体外滴剂（福来恩 / 大宠爱 / 爱滴克类，几十元一支，按体重选型），按说明定期使用，环境同步清洁。</p>
+          <p class="cond-row cond-row--danger"><strong>就医</strong>皮肤已破溃感染，或幼猫月龄体重不足用药限制。</p>
+        </article>
+        <article class="card cond-card" data-cat="deworm">
+          <h3>体内驱虫 <span class="cond-tag">驱虫</span></h3>
+          <p class="cond-row"><strong>识别</strong>便中见虫体或白色米粒样节片，也可能没有明显症状。</p>
+          <p class="cond-row"><strong>居家</strong>猫用体内驱虫片（吡喹酮类成分，几元到十几元一片，严格按体重给药）。</p>
+          <p class="cond-row cond-row--danger"><strong>就医</strong>大量感染、呕吐出虫体，或幼猫体弱——请遵医嘱用药。</p>
+        </article>
+        <article class="card cond-card" data-cat="kit">
+          <h3>家庭常备小药箱 <span class="cond-tag">常备药</span></h3>
+          <p class="cond-row"><strong>建议</strong>碘伏（消毒，选碘伏不选碘酒）、氯己定（2%–5%，可用于黑下巴擦拭）、生理盐水与棉片、纱布绷带、伊丽莎白圈、体温计、宠物益生菌。</p>
+          <p class="cond-row"><strong>原则</strong>外伤先清洁消毒包扎观察；所有口服药使用前先确认对猫安全。</p>
+          <p class="cond-row cond-row--danger"><strong>就医</strong>出血不止、伤口深大、疑似误食异物或毒物。</p>
+        </article>
+      </div>
+
+      <div class="danger-box reveal">
+        <h3>出现这些情况，不要在家观察，直接就医</h3>
+        <ul>
+          <li>频繁进出猫砂盆却尿不出——尿闭属于急症，公猫高发，越早处理越安全</li>
+          <li>完全不吃不喝超过 24 小时，或呕吐频繁且持续</li>
+          <li>呼吸困难、张口呼吸</li>
+          <li>精神萎靡长期躲藏、意识异常、抽搐</li>
+          <li>牙龈发白或发紫、腹部明显胀大</li>
+          <li>疑似中毒：误食药物、百合、巧克力、洋葱等</li>
+        </ul>
+        <p class="danger-box__note">猫很能忍痛，表现出明显异常时往往已经不轻。以上信号以「及时就医」为唯一正确处理方式。</p>
+      </div>
+
+      <p class="source-links reveal">内容参考公开兽医科普整理：
+        <a href="https://zhuanlan.zhihu.com/p/40265118" target="_blank" rel="noopener">猫鼻支科普（知乎）</a>、
+        <a href="https://cn.seamaty.com/index.php?s=/sys/488.html" target="_blank" rel="noopener">猫尿闭急症科普</a>；
+        具体诊断与用药请以执业兽医意见为准。</p>
+    </div>
+  </section>
+
+  <!-- ===== 8. 常见问题 ===== -->
+  <section class="section" id="faq">
     <div class="container container--narrow">
       <header class="section__head reveal">
         <div class="head-paws" aria-hidden="true"></div>
