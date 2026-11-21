@@ -123,15 +123,22 @@ breedBtns.forEach((btn) => {
 
 /* ---------- 病症速查筛选 ---------- */
 const healthBtns = $$(".filter:not(.filter--breed) .filter__btn[data-health-filter]");
+const healthCount = $("#healthCount");
 healthBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
     healthBtns.forEach((b) => {
       b.classList.toggle("is-active", b === btn);
       b.setAttribute("aria-selected", String(b === btn));
     });
+    let visible = 0;
     $$("#healthGrid .cond-card").forEach((c) => {
-      c.classList.toggle("is-hidden", !(btn.dataset.healthFilter === "all" || c.dataset.cat === btn.dataset.healthFilter));
+      const show = btn.dataset.healthFilter === "all" || c.dataset.cat === btn.dataset.healthFilter;
+      c.classList.toggle("is-hidden", !show);
+      if (show) visible++;
     });
+    healthCount.textContent = btn.dataset.healthFilter === "all"
+      ? `共 ${visible} 类常见病症`
+      : `「${btn.textContent.trim()}」相关病症：${visible} 种`;
   });
 });
 
