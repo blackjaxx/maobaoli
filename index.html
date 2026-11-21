@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="「猫暴力」是一只 4 岁的调皮美短虎斑。这里记录它的日常照片，也分享新手科学养猫的经验与技巧。">
+  <meta name="description" content="「猫暴力」是一只 4 岁的调皮美短虎斑。这里记录它的日常照片，提供猫咪百科科普，分享养猫技巧，也关注流浪动物保护。">
   <meta name="color-scheme" content="light">
-  <title>猫暴力 · 一只调皮美短的日常与养猫分享</title>
+  <title>猫暴力 · 养猫日常 · 猫咪百科与流浪动物保护</title>
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <!-- 可选字体：离线时自动回退到系统字体，不影响使用 -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,12 +37,14 @@
       <li><a href="#home">首页</a></li>
       <li><a href="#profile">我家猫</a></li>
       <li><a href="#gallery">照片墙</a></li>
+      <li><a href="#wiki">猫咪百科</a></li>
+      <li><a href="#welfare">保护流浪动物</a></li>
       <li><a href="#tips">养猫技巧</a></li>
       <li><a href="#faq">常见问题</a></li>
     </ul>
 
     <div class="nav__actions">
-      <a class="btn btn--primary btn--sm" href="#gallery">看照片</a>
+      <a class="btn btn--primary btn--sm" href="#welfare">了解救助</a>
       <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="打开菜单">
         <span></span><span></span><span></span>
       </button>
@@ -58,7 +60,7 @@
       <div class="hero__text">
         <span class="hero__badge">美短虎斑 · 公 · 4 岁</span>
         <h1>这是我的猫，<span class="accent">猫暴力</span></h1>
-        <p class="hero__sub">记录它的日常照片，分享实用的养猫经验与技巧。</p>
+        <p class="hero__sub">记录它的日常照片，分享养猫经验与猫咪百科，也关注流浪动物的保护。</p>
         <div class="hero__cta">
           <a class="btn btn--primary btn--lg" href="#profile">认识它</a>
           <a class="btn btn--ghost btn--lg" href="#tips">养猫技巧</a>
@@ -144,7 +146,228 @@
     </div>
   </section>
 
-  <!-- ===== 4. 养猫技巧 ===== -->
+  <!-- ===== 4. 猫咪百科 ===== -->
+  <section class="section" id="wiki">
+    <div class="container">
+      <header class="section__head reveal">
+        <p class="section__kicker">猫咪百科</p>
+        <h2>关于猫的身体、行为与小秘密</h2>
+        <p class="section__lead">按主题整理的科普条目，帮你更准确地理解身边这只猫。</p>
+      </header>
+
+      <div class="tabs reveal" data-tabs>
+        <div class="tabs__nav" role="tablist" aria-label="百科分类">
+          <button class="tabs__btn is-active" data-tab="senses" role="tab" aria-selected="true">感官与生理</button>
+          <button class="tabs__btn" data-tab="behavior" role="tab" aria-selected="false">行为与习惯</button>
+          <button class="tabs__btn" data-tab="fun" role="tab" aria-selected="false">有趣冷知识</button>
+        </div>
+
+        <div class="tab-panel is-active" data-panel="senses" role="tabpanel">
+          <div class="grid grid--3">
+            <article class="card fact-card"><h3>夜视能力强</h3><p>视网膜后方有一层反光膜，可以二次利用进入眼睛的微光——强光下猫眼发光正是这个原因。但完全黑暗中，猫同样看不清。</p></article>
+            <article class="card fact-card"><h3>高频听觉</h3><p>猫能听到远超人类上限的高频声音，还能精准定位声源方位，这是它们捕猎的重要依仗。</p></article>
+            <article class="card fact-card"><h3>尝不出甜味</h3><p>猫缺少感知甜味的味觉受体，对甜食没有兴趣；对苦味和酸味则相当敏感，这也是它们排斥某些食物的原因。</p></article>
+            <article class="card fact-card"><h3>胡须是测量仪</h3><p>胡须根部密布神经末梢，能感知气流与空间距离，帮助判断狭窄通道能否通过。不要修剪猫的胡须。</p></article>
+            <article class="card fact-card"><h3>鼻纹独一无二</h3><p>和人类指纹一样，每只猫的鼻部纹路都不相同，可以作为识别个体的特征。</p></article>
+          </div>
+        </div>
+
+        <div class="tab-panel" data-panel="behavior" role="tabpanel" hidden>
+          <div class="grid grid--3">
+            <article class="card fact-card"><h3>踩奶</h3><p>幼猫哺乳时会用前爪交替按压促进乳汁分泌，成年后在感到安全放松时仍会出现这个动作。</p></article>
+            <article class="card fact-card"><h3>磨爪</h3><p>磨爪同时完成旧指甲鞘脱落、标记气味和伸展身体三件事。提供猫抓板，可以有效减少对家具的抓挠。</p></article>
+            <article class="card fact-card"><h3>掩埋排泄物</h3><p>源于隐藏自身气味、避免被天敌发现的天性。在猫感到绝对安全的环境里，也可能埋得没那么认真。</p></article>
+            <article class="card fact-card"><h3>呼噜声</h3><p>通常出现在放松舒适的状态，也可能用于自我安抚；主要由喉部肌肉快速振动产生。</p></article>
+            <article class="card fact-card"><h3>睡眠时间长</h3><p>成年猫每天通常睡 12–16 小时，幼猫和老年猫更久。多数时间处于浅睡状态，随时能醒来。</p></article>
+          </div>
+        </div>
+
+        <div class="tab-panel" data-panel="fun" role="tabpanel" hidden>
+          <div class="grid grid--3">
+            <article class="card fact-card"><h3>「液体猫」</h3><p>锁骨退化、肩胛骨靠肌肉连接，身体极其柔软灵活，能挤过头部可以通过的缝隙。</p></article>
+            <article class="card fact-card"><h3>左撇子与右撇子</h3><p>不少猫有明确的惯用爪偏好。可以观察它伸爪够零食时先出哪一只。</p></article>
+            <article class="card fact-card"><h3>大量理毛</h3><p>理毛不仅是清洁，也能调节体温、缓解紧张。过度舔毛甚至舔秃，则可能是压力信号。</p></article>
+            <article class="card fact-card"><h3>半驯化的伴侣动物</h3><p>家猫大约从数千年前开始随人类农业聚落生活，与狗相比驯化程度更低，也因此保留了更多独立天性。</p></article>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="wiki__sub reveal">猫语速查 · 信号与含义</h3>
+      <p class="wiki__sub-lead reveal">猫主要用身体说话。点击卡片查看常见信号的含义。</p>
+      <div class="grid grid--2 reveal">
+        <button class="signal" type="button" aria-expanded="false">
+          <span class="signal__sign">🧭 尾巴竖直朝天</span>
+          <span class="signal__body"><span>放松友好的信号，常见于迎接熟悉的人。走路时尾巴高高竖起并微微弯钩，是心情不错的表现。</span></span>
+          <span class="signal__more">点击展开</span>
+        </button>
+        <button class="signal" type="button" aria-expanded="false">
+          <span class="signal__sign">⚡ 尾巴快速甩动</span>
+          <span class="signal__body"><span>多为烦躁或不耐烦，频率越高情绪越强烈，此时不宜继续打扰。</span></span>
+          <span class="signal__more">点击展开</span>
+        </button>
+        <button class="signal" type="button" aria-expanded="false">
+          <span class="signal__sign">💥 炸毛弓背</span>
+          <span class="signal__body"><span>受到惊吓或感到威胁时的防御姿态，需要空间和时间平复，不要靠近或强行安抚。</span></span>
+          <span class="signal__more">点击展开</span>
+        </button>
+        <button class="signal" type="button" aria-expanded="false">
+          <span class="signal__sign">✈️ 飞机耳</span>
+          <span class="signal__body"><span>耳朵压平贴向后方，表示紧张、恐惧或即将防御，通常伴随身体后缩。</span></span>
+          <span class="signal__more">点击展开</span>
+        </button>
+        <button class="signal" type="button" aria-expanded="false">
+          <span class="signal__sign">😌 缓慢眨眼</span>
+          <span class="signal__body"><span>放松与信任的表达。你也可以对它缓慢眨眼，很多猫会用同样的方式回应。</span></span>
+          <span class="signal__more">点击展开</span>
+        </button>
+        <button class="signal" type="button" aria-expanded="false">
+          <span class="signal__sign">🌀 露出肚皮</span>
+          <span class="signal__body"><span>信任的表现，但不一定是邀请摸肚子——很多猫翻身后会伸手拒绝，先试探再决定。</span></span>
+          <span class="signal__more">点击展开</span>
+        </button>
+        <button class="signal" type="button" aria-expanded="false">
+          <span class="signal__sign">〰️ 呼噜声</span>
+          <span class="signal__body"><span>多数代表舒适满足，也可能出现在紧张时的自我安抚中，需要结合情境判断。</span></span>
+          <span class="signal__more">点击展开</span>
+        </button>
+        <button class="signal" type="button" aria-expanded="false">
+          <span class="signal__sign">😤 哈气低吼</span>
+          <span class="signal__body"><span>明确的警告信号，请立即停止接近并保持距离，给它时间冷静。</span></span>
+          <span class="signal__more">点击展开</span>
+        </button>
+      </div>
+
+      <h3 class="wiki__sub reveal">猫年龄换算器</h3>
+      <p class="wiki__sub-lead reveal">猫咪生长速度与人类不同。输入它的年龄，看看大致对应人类的哪个阶段。</p>
+      <div class="age-calc reveal">
+        <div class="age-calc__row">
+          <input id="ageInput" type="number" min="0" max="30" step="0.5" value="1" aria-label="猫咪年龄（岁）">
+          <span class="age-calc__unit">岁</span>
+          <div class="age-calc__result" id="ageResult" aria-live="polite">约等于人类 15 岁 · 幼猫期</div>
+        </div>
+        <p class="age-calc__note">换算为近似值：第 1 年约相当于人类 15 岁，第 2 年约 24 岁，此后每年约增加 4 岁。</p>
+      </div>
+
+      <h3 class="wiki__sub reveal">常见家猫品种速览</h3>
+      <p class="wiki__sub-lead reveal">不同品种的性格与打理成本差异不小，按需求筛选看看。</p>
+      <div class="filter filter--breed reveal" role="tablist" aria-label="按特点筛选品种">
+        <button class="filter__btn is-active" data-breed-filter="all" role="tab" aria-selected="true">全部</button>
+        <button class="filter__btn" data-breed-filter="friendly" role="tab" aria-selected="false">新手友好</button>
+        <button class="filter__btn" data-breed-filter="active" role="tab" aria-selected="false">活泼亲人</button>
+        <button class="filter__btn" data-breed-filter="calm" role="tab" aria-selected="false">安静独立</button>
+        <button class="filter__btn" data-breed-filter="longhair" role="tab" aria-selected="false">长毛需打理</button>
+      </div>
+      <div class="grid grid--4 reveal" id="breedGrid">
+        <article class="card breed-card" data-tags="friendly active">
+          <h3>美国短毛猫 <span class="breed__mark">猫暴力同款</span></h3>
+          <p>体格结实，性格随和，对环境适应力强。</p>
+          <ul class="breed__tags"><li>短毛好打理</li><li>活泼亲人</li></ul>
+        </article>
+        <article class="card breed-card" data-tags="calm friendly">
+          <h3>英国短毛猫</h3>
+          <p>圆脸敦实，温和安静，独立不粘人。</p>
+          <ul class="breed__tags"><li>短毛好打理</li><li>安静独立</li></ul>
+        </article>
+        <article class="card breed-card" data-tags="friendly active">
+          <h3>中华田园猫</h3>
+          <p>聪明健康，适应力强，狸花、橘猫、三花、奶牛都很常见。</p>
+          <ul class="breed__tags"><li>领养常见</li><li>适应力强</li></ul>
+        </article>
+        <article class="card breed-card" data-tags="friendly calm longhair">
+          <h3>布偶猫</h3>
+          <p>性格温顺，对人依恋较强，长毛需要定期梳理。</p>
+          <ul class="breed__tags"><li>长毛需打理</li><li>亲人粘人</li></ul>
+        </article>
+        <article class="card breed-card" data-tags="active friendly">
+          <h3>暹罗猫</h3>
+          <p>精力旺盛，叫声频繁，对主人互动需求很高。</p>
+          <ul class="breed__tags"><li>短毛好打理</li><li>活泼亲人</li></ul>
+        </article>
+        <article class="card breed-card" data-tags="calm friendly longhair">
+          <h3>缅因猫</h3>
+          <p>体型大而性格温和，对运动量和活动空间要求较高。</p>
+          <ul class="breed__tags"><li>长毛需打理</li><li>体型较大</li></ul>
+        </article>
+        <article class="card breed-card" data-tags="calm longhair">
+          <h3>波斯猫</h3>
+          <p>安静优雅，扁脸需要每日清洁眼周，长毛需梳理。</p>
+          <ul class="breed__tags"><li>长毛需打理</li><li>安静独立</li></ul>
+        </article>
+        <article class="card breed-card" data-tags="active friendly">
+          <h3>斯芬克斯猫</h3>
+          <p>几乎无毛，怕冷怕晒，皮肤需要定期擦拭护理。</p>
+          <ul class="breed__tags"><li>无毛特殊护理</li><li>活泼亲人</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 5. 保护流浪动物 ===== -->
+  <section class="section section--tint" id="welfare">
+    <div class="container">
+      <header class="section__head reveal">
+        <p class="section__kicker">保护流浪动物</p>
+        <h2>流浪不是它们的选择</h2>
+        <p class="section__lead">流浪猫的出现大多与遗弃和未绝育繁殖有关。了解问题，才能用科学的方式改善它们的处境。</p>
+      </header>
+
+      <div class="grid grid--3 reveal">
+        <article class="card card--soft"><div class="card__icon" style="--icon-bg:#FCE8D8">🌧️</div><h3>缺少庇护与食物</h3><p>桥洞、车底、绿化带都可能栖身；食物靠翻找垃圾，一碗干净的水并不容易得到。</p></article>
+        <article class="card card--soft"><div class="card__icon" style="--icon-bg:#FDF2E1">🩺</div><h3>疾病与意外</h3><p>没有免疫与驱虫保护，皮肤病、寄生虫、呼吸道感染很常见；车流、误食随时可能带来危险。</p></article>
+        <article class="card card--soft"><div class="card__icon" style="--icon-bg:#EAF2E3">❄️</div><h3>季节的考验</h3><p>严寒与酷暑是最直接的威胁，幼猫和老年猫对极端天气尤其脆弱。</p></article>
+      </div>
+
+      <div class="grid grid--2 welfare__reasons reveal">
+        <article class="card card--outline"><h3>遗弃</h3><p>搬家、生育、生病或「不想养了」，都可能成为遗弃的理由。被遗弃的家养猫缺乏独立生存能力，处境往往比想象中更艰难。</p></article>
+        <article class="card card--outline"><h3>未绝育繁殖</h3><p>没有绝育的流浪猫会持续繁殖，数量增长让食物、空间与疾病的压力进一步加大，救助也因此更难。</p></article>
+      </div>
+
+      <h3 class="wiki__sub reveal">你可以做的六件事</h3>
+      <div class="grid grid--3 reveal">
+        <article class="card"><div class="card__icon" style="--icon-bg:#FCE8D8">🏡</div><h3>领养代替购买</h3><p>从救助组织或送养人处接猫回家，减少「繁殖—买卖—弃养」的循环。</p></article>
+        <article class="card"><div class="card__icon" style="--icon-bg:#EAF2E3">🥣</div><h3>科学投喂</h3><p>定点、定时、定量，并及时清理。避免在人车密集处投喂，减少邻里矛盾。</p></article>
+        <article class="card"><div class="card__icon" style="--icon-bg:#FDF2E1">✂️</div><h3>支持 TNR</h3><p>诱捕—绝育—放归：绝育后的猫回到原地生活，从源头减少无序繁殖。</p></article>
+        <article class="card"><div class="card__icon" style="--icon-bg:#FCE8D8">🚑</div><h3>受伤动物求助</h3><p>保持安全距离，联系当地救助机构或兽医，不要贸然上手（详见下方步骤）。</p></article>
+        <article class="card"><div class="card__icon" style="--icon-bg:#EAF2E3">🏠</div><h3>做负责的主人</h3><p>养之前评估条件，养之后疫苗、驱虫、绝育、陪伴一样不落，绝不弃养。</p></article>
+        <article class="card"><div class="card__icon" style="--icon-bg:#FDF2E1">📣</div><h3>传播科学理念</h3><p>分享靠谱的救助知识，比情绪化传播更有助于改善它们的处境。</p></article>
+      </div>
+
+      <h3 class="wiki__sub reveal">遇到流浪动物，可以这样做</h3>
+      <ol class="steps reveal">
+        <li class="step"><span class="step__no" aria-hidden="true">1</span><div class="step__body"><h3>保持安全距离</h3><p>先观察环境和猫的状态。受惊或受伤的动物可能应激抓咬，也要注意来往车辆与地形。</p></div></li>
+        <li class="step"><span class="step__no" aria-hidden="true">2</span><div class="step__body"><h3>不要追逐或贸然上手</h3><p>追赶会让它更紧张，甚至冲进车流。在远处安静观察几分钟，先确认它是否真的需要帮助。</p></div></li>
+        <li class="step"><span class="step__no" aria-hidden="true">3</span><div class="step__body"><h3>在安全前提下提供帮助</h3><p>如果它看起来只是饥饿，可以在远离车流的固定地点放置食物和干净的水，并定期清理。</p></div></li>
+        <li class="step"><span class="step__no" aria-hidden="true">4</span><div class="step__body"><h3>联系专业救助</h3><p>联系当地救助组织、动物保护团体或宠物医院，说明位置、状况并附照片。车祸、被困高处、明显重伤等紧急情况请直接说明。</p></div></li>
+        <li class="step"><span class="step__no" aria-hidden="true">5</span><div class="step__body"><h3>记录与跟进</h3><p>记下具体位置、时间与照片，方便救助人员找到它；联系不上机构时，也可以在社区群发布求助信息。</p></div></li>
+      </ol>
+
+      <div class="checklist reveal" data-checklist>
+        <div class="checklist__head">
+          <h3>领养前自测清单</h3>
+          <span class="checklist__count" id="checkCount" aria-live="polite">0 / 8</span>
+        </div>
+        <div class="checklist__bar"><span class="checklist__fill" id="checkFill"></span></div>
+        <ul class="checklist__list">
+          <li><label><input type="checkbox"><span>未来 10 年以上，我能提供稳定的住所</span></label></li>
+          <li><label><input type="checkbox"><span>同住的家人或室友都同意养猫</span></label></li>
+          <li><label><input type="checkbox"><span>每月能承担猫粮、猫砂和基础医疗的开销</span></label></li>
+          <li><label><input type="checkbox"><span>能接受定期清理猫砂盆、处理掉毛</span></label></li>
+          <li><label><input type="checkbox"><span>愿意按时完成疫苗、驱虫和适龄绝育</span></label></li>
+          <li><label><input type="checkbox"><span>能接受猫咪夜间跑酷、抓挠等天性</span></label></li>
+          <li><label><input type="checkbox"><span>它生病时，我愿意带它就医而不是放弃</span></label></li>
+          <li><label><input type="checkbox"><span>搬家、结婚、生子等变化发生时，它仍在我的计划里</span></label></li>
+        </ul>
+        <p class="checklist__msg" id="checkMsg">勾选你能做到的选项，看看是否准备好了。</p>
+      </div>
+
+      <div class="notice reveal" role="note">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M12 8v5m0 3.5v.1M10.3 3.9 2.8 17a2 2 0 0 0 1.7 3h15a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>
+        <p>以上内容为科普性质，遇到紧急情况请优先联系兽医或当地救助机构。救助渠道信息：<strong>待补充</strong>。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 6. 养猫技巧 ===== -->
   <section class="section" id="tips">
     <div class="container">
       <header class="section__head reveal">
@@ -199,7 +422,7 @@
     </div>
   </section>
 
-  <!-- ===== 5. 常见问题 ===== -->
+  <!-- ===== 7. 常见问题 ===== -->
   <section class="section section--tint" id="faq">
     <div class="container container--narrow">
       <header class="section__head reveal">
@@ -255,7 +478,7 @@
   </section>
 </main>
 
-<!-- ===== 6. 页脚 ===== -->
+<!-- ===== 8. 页脚 ===== -->
 <footer class="footer" id="contact">
   <div class="container footer__grid">
     <div class="footer__brand">

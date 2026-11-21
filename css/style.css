@@ -212,8 +212,9 @@ button { font-family: inherit; cursor: pointer; }
 
 /* ---------- 卡片网格 ---------- */
 .grid { display: grid; gap: 24px; }
-.grid--3 { grid-template-columns: repeat(3, 1fr); }
 .grid--2 { grid-template-columns: repeat(2, 1fr); }
+.grid--3 { grid-template-columns: repeat(3, 1fr); }
+.grid--4 { grid-template-columns: repeat(4, 1fr); }
 
 .card {
   background: var(--paper); border-radius: var(--radius);
@@ -339,6 +340,112 @@ button { font-family: inherit; cursor: pointer; }
 .faq__a.open .faq__a-inner { padding-bottom: 20px; }
 .faq__a-inner p { font-size: 0.94rem; }
 
+/* ---------- 猫咪百科 ---------- */
+.tabs__nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; margin-bottom: 30px; }
+.tabs__btn {
+  border: 1.5px solid var(--line); background: var(--paper); color: var(--brown);
+  border-radius: 999px; padding: 10px 24px; font-size: 0.95rem; font-weight: 600;
+  min-height: 44px; transition: all 0.2s;
+}
+.tabs__btn:hover { border-color: var(--orange); color: var(--orange-deep); }
+.tabs__btn.is-active { background: var(--orange); border-color: var(--orange); color: #fff; box-shadow: 0 6px 16px rgba(217, 108, 44, 0.3); }
+
+.tab-panel { display: none; }
+.tab-panel.is-active { display: block; animation: panelIn 0.3s ease; }
+@keyframes panelIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+
+.fact-card h3 { font-size: 1.08rem; margin-bottom: 8px; }
+.fact-card p { font-size: 0.92rem; }
+
+.wiki__sub { text-align: center; font-size: clamp(1.25rem, 2.2vw, 1.55rem); margin: 68px 0 8px; }
+.wiki__sub-lead { text-align: center; color: var(--muted); font-size: 0.95rem; margin-bottom: 28px; }
+
+/* 猫语速查卡 */
+.signal {
+  position: relative; display: block; width: 100%; text-align: left;
+  background: var(--paper); border: none; border-radius: 16px;
+  box-shadow: var(--shadow); padding: 16px 18px; cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.signal:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+.signal__sign { display: block; padding-right: 72px; font-weight: 700; color: var(--heading); font-size: 0.98rem; }
+.signal__more {
+  position: absolute; top: 14px; right: 14px;
+  font-size: 0.72rem; font-weight: 600; color: var(--orange-deep);
+  background: var(--orange-light); border-radius: 999px; padding: 2px 10px;
+  transition: opacity 0.2s;
+}
+.signal[aria-expanded="true"] .signal__more { opacity: 0; }
+.signal__body { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.3s ease; }
+.signal__body > span {
+  display: block; overflow: hidden;
+  font-size: 0.9rem; color: var(--text); line-height: 1.7;
+  padding-top: 0; transition: padding 0.3s ease;
+}
+.signal[aria-expanded="true"] .signal__body { grid-template-rows: 1fr; }
+.signal[aria-expanded="true"] .signal__body > span { padding-top: 10px; }
+
+/* 年龄换算器 */
+.age-calc {
+  background: var(--paper); border-radius: var(--radius);
+  box-shadow: var(--shadow); padding: 26px 30px; max-width: 660px; margin: 0 auto;
+}
+.age-calc__row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.age-calc__row input {
+  width: 110px; font: inherit; font-size: 1.2rem; font-weight: 700; color: var(--heading);
+  background: #FFFDF9; border: 1.5px solid var(--line); border-radius: 12px;
+  padding: 10px 14px; text-align: center;
+}
+.age-calc__row input:focus { outline: none; border-color: var(--orange); box-shadow: 0 0 0 3px rgba(217, 108, 44, 0.16); }
+.age-calc__unit { font-weight: 700; color: var(--brown); }
+.age-calc__result {
+  margin-left: auto; background: var(--orange-light); color: var(--orange-deep);
+  font-weight: 700; font-size: 0.98rem; border-radius: 999px; padding: 10px 20px;
+}
+.age-calc__note { margin-top: 14px; font-size: 0.85rem; color: var(--muted); }
+
+/* 品种图鉴 */
+.filter--breed { justify-content: center; }
+.breed-card h3 { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.breed__mark {
+  font-family: var(--font-sans); font-size: 0.72rem; font-weight: 700;
+  color: #fff; background: var(--green); border-radius: 999px; padding: 2px 10px;
+}
+.breed__tags { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.breed__tags li {
+  font-size: 0.78rem; font-weight: 600; color: var(--green);
+  background: var(--green-light); border-radius: 999px; padding: 3px 12px;
+}
+.breed-card.is-hidden { display: none; }
+
+.welfare__reasons { margin-top: 24px; }
+
+/* 领养自测清单 */
+.checklist {
+  max-width: 680px; margin: 0 auto;
+  background: var(--paper); border-radius: var(--radius);
+  box-shadow: var(--shadow); padding: 30px 34px;
+}
+.checklist__head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+.checklist__head h3 { font-size: 1.2rem; }
+.checklist__count { font-weight: 800; font-size: 1rem; color: var(--orange-deep); }
+.checklist__bar { height: 8px; background: var(--cream-2); border-radius: 999px; margin: 14px 0 20px; overflow: hidden; }
+.checklist__fill {
+  display: block; height: 100%; width: 0;
+  background: linear-gradient(90deg, #E8843C, var(--orange));
+  border-radius: 999px; transition: width 0.35s ease;
+}
+.checklist__list { list-style: none; display: grid; gap: 10px; }
+.checklist__list label {
+  display: flex; gap: 12px; align-items: flex-start;
+  background: var(--cream); border-radius: 12px;
+  padding: 12px 16px; font-size: 0.95rem; cursor: pointer;
+  transition: background 0.2s;
+}
+.checklist__list label:hover { background: var(--orange-light); }
+.checklist__list input { width: 18px; height: 18px; margin-top: 3px; accent-color: var(--orange); flex: none; }
+.checklist__msg { margin-top: 16px; font-size: 0.9rem; color: var(--muted); text-align: center; }
+
 /* ---------- 页脚 ---------- */
 .footer { background: #4A3B32; color: #EFE3D6; margin-top: 40px; }
 .footer__grid {
@@ -438,6 +545,7 @@ button { font-family: inherit; cursor: pointer; }
 /* ---------- 响应式 ---------- */
 @media (max-width: 1080px) {
   .gallery { grid-template-columns: repeat(3, 1fr); }
+  .grid--4 { grid-template-columns: repeat(2, 1fr); }
   .footer__grid { grid-template-columns: 1fr 1fr; gap: 36px; }
 }
 
@@ -466,8 +574,10 @@ button { font-family: inherit; cursor: pointer; }
 
 @media (max-width: 760px) {
   .section { padding: 64px 0; }
-  .grid--3, .grid--2 { grid-template-columns: 1fr; }
+  .grid--3, .grid--2, .grid--4 { grid-template-columns: 1fr; }
   .grid { gap: 18px; }
+  .age-calc__result { margin-left: 0; }
+  .wiki__sub { margin-top: 48px; }
   .card { padding: 24px 22px; }
   .profile__info { padding: 26px 22px; }
   .profile__facts { grid-template-columns: repeat(2, 1fr); }

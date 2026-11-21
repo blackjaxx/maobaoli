@@ -78,6 +78,91 @@ $$(".faq__q").forEach((q) => {
   });
 });
 
+/* ---------- 百科：分类 Tab ---------- */
+$$("[data-tabs]").forEach((tabs) => {
+  const btns = $$(".tabs__btn", tabs);
+  const panels = $$(".tab-panel", tabs);
+  btns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      btns.forEach((b) => {
+        const active = b === btn;
+        b.classList.toggle("is-active", active);
+        b.setAttribute("aria-selected", String(active));
+      });
+      panels.forEach((p) => {
+        const active = p.dataset.panel === btn.dataset.tab;
+        p.classList.toggle("is-active", active);
+        p.hidden = !active;
+      });
+    });
+  });
+});
+
+/* ---------- 百科：猫语速查折叠 ---------- */
+$$(".signal").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const open = btn.getAttribute("aria-expanded") === "true";
+    btn.setAttribute("aria-expanded", String(!open));
+  });
+});
+
+/* ---------- 百科：品种筛选 ---------- */
+const breedBtns = $$(".filter--breed .filter__btn");
+breedBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    breedBtns.forEach((b) => {
+      b.classList.toggle("is-active", b === btn);
+      b.setAttribute("aria-selected", String(b === btn));
+    });
+    $$("#breedGrid .breed-card").forEach((c) => {
+      const tags = (c.dataset.tags || "").split(" ");
+      c.classList.toggle("is-hidden", !(btn.dataset.breedFilter === "all" || tags.includes(btn.dataset.breedFilter)));
+    });
+  });
+});
+
+/* ---------- 百科：猫年龄换算器 ---------- */
+const ageInput = $("#ageInput");
+const ageResult = $("#ageResult");
+function stageOf(catAge) {
+  if (catAge < 1) return "幼猫期";
+  if (catAge < 2) return "青少年期";
+  if (catAge < 7) return "成年期";
+  if (catAge < 10) return "壮年期";
+  return "老年期";
+}
+function updateAge() {
+  const a = parseFloat(ageInput.value);
+  if (isNaN(a) || a < 0) {
+    ageResult.textContent = "请输入有效年龄";
+    return;
+  }
+  const clamped = Math.min(a, 30);
+  let human;
+  if (clamped <= 1) human = Math.round(clamped * 15);
+  else if (clamped <= 2) human = Math.round(15 + (clamped - 1) * 9);
+  else human = Math.round(24 + (clamped - 2) * 4);
+  ageResult.textContent = `约等于人类 ${human} 岁 · ${stageOf(clamped)}`;
+}
+ageInput.addEventListener("input", updateAge);
+updateAge();
+
+/* ---------- 保护流浪动物：领养自测清单 ---------- */
+const checkItems = $$("[data-checklist] input[type='checkbox']");
+const checkCount = $("#checkCount");
+const checkFill = $("#checkFill");
+const checkMsg = $("#checkMsg");
+function updateChecklist() {
+  const n = checkItems.filter((c) => c.checked).length;
+  checkCount.textContent = `${n} / ${checkItems.length}`;
+  checkFill.style.width = `${(n / checkItems.length) * 100}%`;
+  checkMsg.textContent = n === checkItems.length
+    ? "全部满足的话，可以去正规救助组织或送养平台看看了。"
+    : `已确认 ${n} 项，还有 ${checkItems.length - n} 项待考虑——想清楚再接它回家，对彼此都好。`;
+}
+checkItems.forEach((c) => c.addEventListener("change", updateChecklist));
+updateChecklist();
+
 $("#lightboxClose").addEventListener("click", () => modal.close());
 $("#lightboxPrev").addEventListener("click", () => showPhoto(current - 1));
 $("#lightboxNext").addEventListener("click", () => showPhoto(current + 1));
@@ -109,7 +194,7 @@ navLinks.addEventListener("click", (e) => {
 });
 
 /* ---------- 导航：滚动高亮当前版块 ---------- */
-const sections = ["home", "profile", "gallery", "tips", "faq"]
+const sections = ["home", "profile", "gallery", "wiki", "welfare", "tips", "faq"]
   .map((id) => document.getElementById(id))
   .filter(Boolean);
 
