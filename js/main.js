@@ -220,12 +220,12 @@ async function loadSiteStats() {
   try {
     let uv;
     if (!localStorage.getItem("maobaoli-visitor")) {
-      uv = await abacusHit("uv");
+      uv = await abacusHit("visitors");
       localStorage.setItem("maobaoli-visitor", "1");
     } else {
-      uv = await abacusGet("uv");
+      uv = await abacusGet("visitors");
     }
-    const pv = await abacusHit("pv");
+    const pv = await abacusHit("pageviews");
     pvEl.textContent = pv;
     uvEl.textContent = uv;
   } catch {
