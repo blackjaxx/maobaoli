@@ -68,8 +68,8 @@
         </div>
         <dl class="hero__stats">
           <div><dd>8</dd><dt>张日常照片</dt></div>
-          <div><dd>14</dd><dt>条百科科普</dt></div>
-          <div><dd>6</dd><dt>篇养猫技巧</dt></div>
+          <div><dd>17</dd><dt>条百科科普</dt></div>
+          <div><dd>9</dd><dt>类病症速查</dt></div>
         </dl>
       </div>
 
@@ -162,17 +162,29 @@
       <div class="tabs reveal" data-tabs>
         <div class="tabs__nav" role="tablist" aria-label="百科分类">
           <button class="tabs__btn is-active" data-tab="senses" role="tab" aria-selected="true">感官与生理</button>
+          <button class="tabs__btn" data-tab="nutrition" role="tab" aria-selected="false">营养与饮食</button>
           <button class="tabs__btn" data-tab="behavior" role="tab" aria-selected="false">行为与习惯</button>
           <button class="tabs__btn" data-tab="fun" role="tab" aria-selected="false">有趣冷知识</button>
         </div>
 
         <div class="tab-panel is-active" data-panel="senses" role="tabpanel">
           <div class="grid grid--3">
-            <article class="card fact-card"><h3>夜视能力强</h3><p>视网膜后方有一层反光膜，可以二次利用进入眼睛的微光——强光下猫眼发光正是这个原因。但完全黑暗中，猫同样看不清。</p></article>
-            <article class="card fact-card"><h3>高频听觉</h3><p>猫能听到远超人类上限的高频声音，还能精准定位声源方位，这是它们捕猎的重要依仗。</p></article>
-            <article class="card fact-card"><h3>尝不出甜味</h3><p>猫缺少感知甜味的味觉受体，对甜食没有兴趣；对苦味和酸味则相当敏感，这也是它们排斥某些食物的原因。</p></article>
+            <article class="card fact-card"><h3>嗅觉：约 2 亿个受体</h3><p>鼻腔内约有 2 亿个嗅觉受体，灵敏度约为人类的 14 倍。猫主要靠气味识别领地、同伴与食物，新物品到家先「闻后看」。</p></article>
+            <article class="card fact-card"><h3>夜视与视野</h3><p>视网膜后方有一层反光膜（tapetum lucidum），可二次利用微光，强光下猫眼发光正源于此；视野宽广，但完全黑暗中猫同样看不清。</p></article>
+            <article class="card fact-card"><h3>味觉：约 470 个味蕾</h3><p>人类约有 9000 个味蕾，猫只有约 470 个，且因基因突变无法感知甜味；它们对氨基酸（鲜味）和苦味则相当敏感。</p></article>
+            <article class="card fact-card"><h3>生命体征速查</h3><p>正常体温 38.0–39.2℃；静息心率约 120–180 次/分；安静时呼吸约 20–30 次/分。居家观察呼吸频率，是判断状态的重要参考。</p></article>
             <article class="card fact-card"><h3>胡须是测量仪</h3><p>胡须根部密布神经末梢，能感知气流与空间距离，帮助判断狭窄通道能否通过。不要修剪猫的胡须。</p></article>
             <article class="card fact-card"><h3>鼻纹独一无二</h3><p>和人类指纹一样，每只猫的鼻部纹路都不相同，可以作为识别个体的特征。</p></article>
+          </div>
+        </div>
+
+        <div class="tab-panel" data-panel="nutrition" role="tabpanel" hidden>
+          <div class="grid grid--3">
+            <article class="card fact-card"><h3>专性肉食动物</h3><p>猫是 obligate carnivore：无法自行合成足量牛磺酸，必须从动物组织中摄取。长期缺乏会导致视网膜变性失明与扩张型心肌病（DCM）——不能长期用狗粮或素食替代猫粮。</p></article>
+            <article class="card fact-card"><h3>水分摄入是大事</h3><p>猫的祖先源自干旱地区，渴感较迟钝。每日摄水量约为每公斤体重 40–60ml，湿粮是重要的补水来源；饮水不足与下泌尿道疾病密切相关。</p></article>
+            <article class="card fact-card"><h3>危险食物清单</h3><p>洋葱大蒜（可致溶血性贫血）、巧克力、葡萄、酒精对猫有毒；百合属植物剧毒，误食少量即可引发急性肾衰竭，养猫家庭不建议养百合。</p></article>
+            <article class="card fact-card"><h3>体重管理</h3><p>绝育后代谢下降，干粮自由采食容易过量。肥胖是糖尿病和关节问题的重要诱因——定时定量、湿粮搭配、每天玩耍消耗，比任何「减肥粮」都有效。</p></article>
+            <article class="card fact-card"><h3>换粮要过渡</h3><p>猫对食物变化敏感，突然换粮常引发软便或拒食。新旧粮按比例用 7 天左右逐步过渡，肠胃敏感的猫可以延长到两周。</p></article>
           </div>
         </div>
 
@@ -303,6 +315,54 @@
           <ul class="breed__tags"><li>无毛特殊护理</li><li>活泼亲人</li></ul>
         </article>
       </div>
+
+      <h3 class="wiki__sub reveal">认识猫咪的重大疾病</h3>
+      <p class="wiki__sub-lead reveal">这些疾病都无法在家自诊自治——定期体检（血检、尿检、超声）是发现它们唯一可靠的途径。以下内容仅作认识参考。</p>
+      <div class="grid grid--3 reveal">
+        <article class="card cond-card">
+          <h3>慢性肾病（CKD） <span class="cond-tag">老年高发</span></h3>
+          <p class="cond-row"><strong>认识</strong>高龄猫最常见的疾病之一，资料估计 10 岁以上猫约三分之一受影响；早期几乎没有症状。</p>
+          <p class="cond-row"><strong>信号</strong>多饮多尿、体重缓慢下降、食欲波动。</p>
+          <p class="cond-row cond-row--danger"><strong>应对</strong>7 岁后每年体检（血检＋尿检），确诊后按国际 IRIS 标准分期管理，配合处方饮食。</p>
+        </article>
+        <article class="card cond-card">
+          <h3>肥厚性心肌病（HCM） <span class="cond-tag">心脏病</span></h3>
+          <p class="cond-row"><strong>认识</strong>猫最常见的心脏病，缅因猫、布偶猫等品种有遗传倾向，早期可能毫无表现。</p>
+          <p class="cond-row"><strong>信号</strong>呼吸急促、精神变差；急性血栓栓塞时可突发后肢瘫痪。</p>
+          <p class="cond-row cond-row--danger"><strong>应对</strong>定期听诊，有疑似表现时做心脏超声（BNP 血检可辅助）。</p>
+        </article>
+        <article class="card cond-card">
+          <h3>猫下泌尿道疾病（FLUTD） <span class="cond-tag">急症风险</span></h3>
+          <p class="cond-row"><strong>认识</strong>泛指膀胱与尿道疾病，包括自发性膀胱炎（FIC）、结石和感染；公猫尿道细，梗阻风险更高。</p>
+          <p class="cond-row"><strong>信号</strong>频繁进出猫砂盆、排尿嚎叫、血尿。</p>
+          <p class="cond-row cond-row--danger"><strong>应对</strong>增加饮水与湿粮比例；一旦尿闭（完全尿不出）属于急症，立即就医。</p>
+        </article>
+        <article class="card cond-card">
+          <h3>糖尿病 <span class="cond-tag">代谢病</span></h3>
+          <p class="cond-row"><strong>认识</strong>与肥胖、年龄相关，公猫略高发；多见于中老年猫。</p>
+          <p class="cond-row"><strong>信号</strong>多饮多尿、食欲正常但体重持续下降。</p>
+          <p class="cond-row cond-row--danger"><strong>应对</strong>确诊需血糖与尿检；核心是控制体重、规范饮食，部分猫经治疗可缓解。</p>
+        </article>
+        <article class="card cond-card">
+          <h3>猫口炎（FCGS） <span class="cond-tag">口腔</span></h3>
+          <p class="cond-row"><strong>认识</strong>口腔慢性炎症，疼痛剧烈，病因复杂（免疫异常、杯状病毒等）。</p>
+          <p class="cond-row"><strong>信号</strong>流口水、口臭、进食困难甚至对碗哈气。</p>
+          <p class="cond-row cond-row--danger"><strong>应对</strong>由兽医评估分级；重度病例可能需要拔除病灶牙齿来解除疼痛。</p>
+        </article>
+        <article class="card cond-card">
+          <h3>FIP / FIV / FeLV <span class="cond-tag">传染病</span></h3>
+          <p class="cond-row"><strong>认识</strong>传染性腹膜炎（FIP）由猫肠道冠状病毒突变引发，多猫环境风险更高，曾是致命疾病，近年已有抗病毒治疗手段；FIV（猫艾滋）与 FeLV（猫白血病）主要经咬伤传播。</p>
+          <p class="cond-row"><strong>信号</strong>FIP：波动发热、食欲不振、腹围增大或消瘦。</p>
+          <p class="cond-row cond-row--danger"><strong>应对</strong>新猫入户先做 FIV/FeLV 检测；FIP 疑似症状务必尽早确诊，治疗窗口很关键。</p>
+        </article>
+      </div>
+
+      <p class="source-links reveal">本版块内容参考维基百科条目整理：
+        <a href="https://zh.wikipedia.org/wiki/%E7%8C%AB" target="_blank" rel="noopener">猫</a> ·
+        <a href="https://zh.wikipedia.org/wiki/%E7%8C%AB%E7%B2%AE" target="_blank" rel="noopener">猫粮</a> ·
+        <a href="https://zh.wikipedia.org/wiki/%E7%89%9B%E7%A3%BA%E9%85%B8" target="_blank" rel="noopener">牛磺酸</a> ·
+        <a href="https://zh.wikipedia.org/wiki/%E7%8C%AB%E4%BC%A0%E6%9F%93%E6%80%A7%E8%85%B9%E8%86%9C%E7%82%8E" target="_blank" rel="noopener">猫传染性腹膜炎</a>。
+        科普不构成诊断依据，猫咪健康状况请以兽医检查为准。</p>
     </div>
   </section>
 
@@ -565,7 +625,7 @@
         <div class="faq__item">
           <h3><button class="faq__q" type="button" aria-expanded="false">疫苗和驱虫的时间表是什么？<span class="faq__icon" aria-hidden="true"></span></button></h3>
           <div class="faq__a" hidden><div class="faq__a-inner">
-            <p>幼猫一般 8 周龄左右开始猫三联，每针间隔 3–4 周，共 2–3 针，之后每年加强；狂犬疫苗按当地要求接种。体外驱虫通常每月一次，体内驱虫 1–3 个月一次（看药品说明和是否外出）。具体方案请让兽医根据猫咪情况安排。</p>
+            <p>「猫三联」指针对三种核心传染病的联合疫苗：猫泛白细胞减少症（猫瘟，FPV）、疱疹病毒（FHV-1）与杯状病毒（FCV），是世界小动物兽医协会（WSAVA）推荐的核心疫苗。幼猫一般 8 周龄左右开始接种，每针间隔 3–4 周、共 2–3 针，之后按兽医建议定期加强；狂犬疫苗按当地规定接种。体外驱虫通常每月一次，体内驱虫 1–3 个月一次（看药品说明和是否外出）。</p>
           </div></div>
         </div>
 
