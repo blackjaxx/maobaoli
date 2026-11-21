@@ -41,6 +41,9 @@
 
 [hidden] { display: none !important; }
 
+/* 筛选隐藏类（品种图鉴 / 病症速查等通用） */
+.is-hidden { display: none !important; }
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: calc(var(--header-h) + 16px);
