@@ -163,6 +163,78 @@ function updateChecklist() {
 checkItems.forEach((c) => c.addEventListener("change", updateChecklist));
 updateChecklist();
 
+/* ---------- 助力点赞 & 访问统计（Abacus 公开计数服务，仅记录次数） ---------- */
+const ABACUS = "https://abacus.jasoncameron.dev";
+const COUNTER_NS = "maobaoli-v1";
+
+async function abacusHit(key) {
+  const res = await fetch(`${ABACUS}/hit/${COUNTER_NS}/${key}`);
+  if (!res.ok) throw new Error("counter service error");
+  return (await res.json()).value;
+}
+async function abacusGet(key) {
+  const res = await fetch(`${ABACUS}/get/${COUNTER_NS}/${key}`);
+  if (!res.ok) throw new Error("counter service error");
+  const data = await res.json();
+  return typeof data.value === "number" ? data.value : 0; // 键不存在时按 0 处理
+}
+
+/* 助力点赞 */
+const supportBtn = $("#supportBtn");
+const supportCountEl = $("#supportCount");
+const supportMsg = $("#supportMsg");
+let supportBusy = false;
+
+async function loadSupport() {
+  try {
+    const v = await abacusGet("support");
+    supportCountEl.innerHTML = `累计助力：<strong>${v}</strong> 次`;
+  } catch {
+    supportCountEl.innerHTML = `累计助力：<strong>--</strong> 次`;
+    supportMsg.textContent = "计数服务暂时无法连接。";
+  }
+}
+
+supportBtn.addEventListener("click", async () => {
+  if (supportBusy) return;
+  supportBusy = true;
+  supportBtn.classList.add("is-clicked");
+  try {
+    const v = await abacusHit("support");
+    supportCountEl.innerHTML = `累计助力：<strong>${v}</strong> 次`;
+    supportMsg.textContent = "助力成功，感谢支持。";
+    localStorage.setItem("maobaoli-support", "1");
+  } catch {
+    supportMsg.textContent = "计数服务暂时无法连接，请稍后再试。";
+  } finally {
+    setTimeout(() => supportBtn.classList.remove("is-clicked"), 450);
+    supportBusy = false;
+  }
+});
+loadSupport();
+
+/* 访问统计：PV 每次加载 +1，UV 按设备标记只 +1 一次 */
+async function loadSiteStats() {
+  const pvEl = $("#statPv");
+  const uvEl = $("#statUv");
+  try {
+    let uv;
+    if (!localStorage.getItem("maobaoli-visitor")) {
+      uv = await abacusHit("uv");
+      localStorage.setItem("maobaoli-visitor", "1");
+    } else {
+      uv = await abacusGet("uv");
+    }
+    const pv = await abacusHit("pv");
+    pvEl.textContent = pv;
+    uvEl.textContent = uv;
+  } catch {
+    pvEl.textContent = "--";
+    uvEl.textContent = "--";
+  }
+}
+loadSiteStats();
+
 $("#lightboxClose").addEventListener("click", () => modal.close());
 $("#lightboxPrev").addEventListener("click", () => showPhoto(current - 1));
 $("#lightboxNext").addEventListener("click", () => showPhoto(current + 1));

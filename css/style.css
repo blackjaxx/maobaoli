@@ -446,6 +446,32 @@ button { font-family: inherit; cursor: pointer; }
 .checklist__list input { width: 18px; height: 18px; margin-top: 3px; accent-color: var(--orange); flex: none; }
 .checklist__msg { margin-top: 16px; font-size: 0.9rem; color: var(--muted); text-align: center; }
 
+/* ---------- 助力点赞 ---------- */
+.support {
+  max-width: 680px; margin: 52px auto 0;
+  background: linear-gradient(160deg, #FFF3E6, #FCE8D8);
+  border-radius: var(--radius); box-shadow: var(--shadow);
+  padding: 40px 30px 34px; text-align: center;
+}
+.support h3 { font-size: 1.35rem; }
+.support__lead { margin: 8px 0 22px; color: var(--text); font-size: 0.95rem; }
+.support__btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: var(--orange); color: #fff; border: none;
+  border-radius: 999px; padding: 16px 40px; font-size: 1.1rem; font-weight: 700;
+  min-height: 52px; box-shadow: 0 10px 26px rgba(217, 108, 44, 0.35);
+  transition: transform 0.15s, background 0.2s, box-shadow 0.2s;
+}
+.support__btn:hover { background: var(--orange-deep); transform: translateY(-2px); }
+.support__btn:active { transform: scale(0.96); }
+.support__btn.is-clicked .support__heart { animation: heartPop 0.4s ease; }
+.support__heart { display: inline-block; font-size: 1.2rem; }
+@keyframes heartPop { 0% { transform: scale(1); } 40% { transform: scale(1.5); } 100% { transform: scale(1); } }
+.support__count { margin-top: 20px; font-size: 1rem; color: var(--heading); }
+.support__count strong { color: var(--orange-deep); font-size: 1.25rem; }
+.support__msg { margin-top: 6px; font-size: 0.9rem; color: var(--muted); min-height: 1.4em; }
+.support__note { margin-top: 14px; font-size: 0.8rem; color: var(--muted); }
+
 /* ---------- 页脚 ---------- */
 .footer { background: #4A3B32; color: #EFE3D6; margin-top: 40px; }
 .footer__grid {
@@ -471,6 +497,7 @@ button { font-family: inherit; cursor: pointer; }
   display: grid; gap: 6px;
 }
 .footer__bottom strong { color: #F4B183; }
+.footer__stats { border-bottom: 1px dashed rgba(255, 255, 255, 0.18); padding-bottom: 14px; margin-bottom: 4px; }
 
 /* ---------- 照片灯箱 ---------- */
 .lightbox {
