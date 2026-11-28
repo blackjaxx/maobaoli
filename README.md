@@ -78,3 +78,9 @@ stray-home/
 - 本站为个人养猫分享网站：照片均为博主实拍，养猫内容为个人经验分享，不构成医疗建议。
 - 联系方式、社交媒体等处统一以「待补充」占位，可自行填写。
 - 无任何后端与数据收集，纯静态页面。
+
+## 内容参考
+
+- 档案健康字段（绝育/免疫/驱虫）与「封窗防坠楼」领养审核标准，参考了 GitHub 上开源的校园猫档案与领养小程序项目：
+  [zhiiee/cats（流浪猫速查手册）](https://github.com/zhiiee/cats)、[rictt/cat-adoption](https://github.com/rictt/cat-adoption)
+- 百科数据参考[维基百科「猫」「猫粮」「牛磺酸」「猫传染性腹膜炎」条目](https://zh.wikipedia.org/wiki/%E7%8C%AB)。
